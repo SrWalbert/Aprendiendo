@@ -1,0 +1,15 @@
+Cámara carnal, ¿cómo estás?
+Sobreescribiendo lineas con función .writelines() .
+Sabías que:
+escribir .wl([a,b]) .wl[b,c] es igual a escribir .wl[a,b,c,d]
+
+
+Linea 1 escrita en el archivo escribir.txt, con ayuda de 'a' en with open()
+
+Linea 2 escrita en el archivo escribir.txt, con ayuda de 'a' en with open()
+
+Linea 3 escrita en el archivo escribir.txt, con ayuda de 'a' en with open()
+
+Linea 4 escrita en el archivo escribir.txt, con ayuda de 'a' en with open()
+
+Linea 5 escrita en el archivo escribir.txt, con ayuda de 'a' en with open()

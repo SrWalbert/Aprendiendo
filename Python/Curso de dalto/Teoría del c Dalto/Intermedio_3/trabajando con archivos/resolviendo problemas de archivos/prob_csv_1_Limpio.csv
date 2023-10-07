@@ -1,0 +1,8 @@
+,Nombre,Apellido,edad
+0,Nombre," ""Apellido"""," ""edad"""
+1,Lucas," ""Dalto""", 97
+2,Roberto," ""Nuñez""", 36
+3,Ximena," ""Perez""", 25
+4,Jacinto," ""Ramos""", 60
+5,Extra," ""NNN""", 999
+6,faltante, ,nan

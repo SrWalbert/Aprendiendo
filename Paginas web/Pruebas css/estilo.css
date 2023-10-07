@@ -1,0 +1,187 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact-form {
+  display: inline-block;
+  width: 75% 75%;
+  margin: 25px 25% 0px 25%;
+}
+.contact-form__input--active,
+.contact-form__input {
+  background-color: gray;
+  transition: 0.12s;
+}
+.contact-form__input--active,
+.contact-form__input:focus {
+  color: red;
+  background-color: white;
+}
+
+input::placeholder {
+  color: aquamarine;
+}
+.tipografia {
+  font-size: 25px;
+}
+.tipografia__h2 {
+  background-color: transparent;
+  font-size: 2em;
+  padding: center;
+}
+.tipografia__p {
+  color: green;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  margin: 25px;
+}
+h2 {
+  position: relative;
+  background-color: red;
+  display: inline-block;
+  padding: 50px;
+  width: 75% 75%;
+  margin: 25px 25% 0px 25%;
+  border: 4px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: blue;
+}
+
+.contenedor {
+  position: relative;
+  margin: 50px auto;
+  height: 900px;
+  width: 900px;
+  outline: 10px solid black;
+  display: block;
+}
+
+.contenedor div {
+  position: absolute;
+  font-size: 75px;
+}
+
+.caja1 {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+.caja2 {
+  height: 200px;
+  width: 200px;
+  background-color: yellow;
+  right: 0;
+}
+.caja3 {
+  height: 200px;
+  width: 200px;
+  background-color: orange;
+  bottom: 0;
+}
+.caja4 {
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  right: 0;
+  bottom: 0;
+}
+.caja5 {
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+div .display-test {
+  height: 150px;
+  width: 150px;
+  margin: 20px;
+  border: 10px solid red;
+  background: yellow;
+  display: inline-block;
+}
+
+.caja-pos-fixed {
+  display: inline;
+  position: fixed;
+  bottom: 0;
+  background: red;
+  font-size: 30px;
+  text-align: center;
+  width: 75% 75%;
+  margin: 0 25%;
+  opacity: 50%;
+}
+
+.conten {
+  background-color: gray;
+  border: 8px solid orange;
+  margin: 20px 25%;
+}
+.conten img {
+  height: 200px;
+  position: relative;
+  float: right;
+  padding: 20px;
+}
+.texto {
+  padding: 20px;
+}
+
+.texto::first-line {
+  color: green;
+}
+.texto::first-letter {
+  font-size: 2em;
+}
+.pseudo-e::after {
+  content: "Agua";
+}
+.hover-test {
+  width: 150px;
+  background-color: aquamarine;
+  text-align: center;
+  margin: 50px;
+  transition: width 1s, background-color 0.5s;
+}
+
+.hover-test:hover {
+  width: 160px;
+  background-color: aqua;
+}
+
+.hbutton {
+  width: 200px;
+  height: 90px;
+  background-color: purple;
+  outline: 2px solid black;
+  transition: all 0.3s;
+  margin: auto 30px;
+}
+.hbutton:hover {
+  background: blue;
+  outline: 1px;
+}
+#a-link:link {
+  color: #b90404;
+}
+#a-link:visited {
+  color: black;
+}
+.space-active {
+  margin: 25px 10% 105px 35%;
+  background-color: cyan;
+  text-align: center;
+  width: 200px;
+  border: 1px solid gray;
+  transition: all 2s;
+}
+.space-active:active {
+  width: 400px;
+  height: 400px;
+  background: blue;
+}
