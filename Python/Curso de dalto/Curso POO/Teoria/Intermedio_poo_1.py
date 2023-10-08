@@ -72,9 +72,69 @@ recorrer(lista_2)
 print("\n-----------\n")
 
 "   Detalles técnicos"
-# Tarea investigar "Duck typing", enlaces estáticos y dinámicos, tipo real y tipo declarado
-# https://youtu.be/HtKqSJX7VoM?si=QFoggxaNNNuLTVZv&t=6347
 
+
+"Duck typing"
+# El duck typing es un concepto utilizado en lenguajes de programación como Python para determinar el tipo de un objeto en función de su comportamiento en lugar de su tipo explícito. La idea fundamental detrás del duck typing es que "si camina como un pato y suena como un pato, entonces debe ser un pato". En otras palabras, en lugar de preocuparse por el tipo específico de un objeto, Python se enfoca en lo que el objeto puede hacer o las operaciones que puede realizar.
+
+# En Python, esto significa que no es necesario declarar explícitamente el tipo de una variable o un parámetro de función. En su lugar, Python evalúa el tipo en tiempo de ejecución según cómo se utilizan los objetos y si las operaciones que se realizan en ellos son válidas. Esto permite una flexibilidad significativa en la escritura de código y facilita la reutilización de código, ya que no es necesario preocuparse por los tipos concretos.
+
+# Por ejemplo, si tiene una función que espera un objeto que pueda realizar una operación de suma, simplemente puede pasar cualquier objeto que implemente esa operación, sin importar su tipo real. Si el objeto es un número entero, una cadena o cualquier otra cosa que tenga una operación de suma definida, Python lo aceptará.
+
+# Aquí hay un ejemplo sencillo de duck typing en Python:
+
+
+def suma(a, b):
+    return a + b
+
+
+# Llamamos a la función con diferentes tipos de objetos
+resultado1 = suma(5, 3)  # Enteros
+resultado2 = suma("Hola, ", "mundo")  # Cadenas
+resultado3 = suma([1, 2], [3, 4])  # Listas
+
+print(resultado1)  # Resultado: 8
+print(resultado2)  # Resultado: "Hola, mundo"
+print(resultado3)  # Resultado: [1, 2, 3, 4]
+
+# En este ejemplo, la función `suma` no se preocupa por los tipos de `a` y `b`, siempre y cuando puedan sumarse de alguna manera. Esto es un ejemplo de duck typing en acción en Python.
+
+"enlaces estáticos y declarados"
+
+# En el contexto de la programación en Python, los términos "enlace estático" y "enlace dinámico" se utilizan más comúnmente en el contexto de la importación de módulos y la resolución de nombres. Aunque Python es un lenguaje de programación de enlace dinámico, es útil entender estos conceptos para comprender cómo funcionan las importaciones y la resolución de nombres en Python.
+
+# 1. **Enlace Estático:**
+#    - En el enlace estático, las referencias a objetos y funciones se resuelven en tiempo de compilación. Esto significa que el enlace se realiza antes de que el programa se ejecute.
+#    - En lenguajes de enlace estático, como C o C++, las referencias a funciones y variables globales se resuelven en tiempo de compilación. Esto implica que el código binario resultante contiene direcciones de memoria absolutas para las funciones y variables.
+#    - En el enlace estático, si un módulo hace referencia a otro módulo, esta referencia se resuelve y se incorpora directamente en el código compilado. Por lo tanto, cualquier cambio en el módulo referenciado requeriría volver a compilar el programa completo.
+
+# 2. **Enlace Dinámico:**
+#    - En el enlace dinámico, las referencias a objetos y funciones se resuelven en tiempo de ejecución, en lugar de en tiempo de compilación.
+#    - Python es un lenguaje de enlace dinámico, lo que significa que la resolución de nombres se realiza en tiempo de ejecución. Cuando importas un módulo en Python, el sistema busca y carga el módulo en tiempo de ejecución, y luego puedes acceder a sus objetos y funciones a través de nombres.
+#    - Esto permite una mayor flexibilidad y modularidad, ya que los módulos pueden agregarse o modificarse sin necesidad de volver a compilar el programa principal. También facilita la creación de programas más dinámicos y la implementación de características como la reflexión.
+
+# En Python, la resolución de nombres se realiza utilizando el sistema de módulos y el atributo `import`. Cuando importas un módulo, Python busca en los directorios especificados en `sys.path` y carga el módulo en memoria. Luego, puedes acceder a las variables y funciones definidas en ese módulo mediante la notación de punto, como `nombre_modulo.variable` o `nombre_modulo.funcion()`.
+
+# En resumen, Python utiliza un enlace dinámico para la resolución de nombres, lo que significa que las referencias a objetos y funciones se resuelven en tiempo de ejecución, lo que proporciona una mayor flexibilidad y modularidad en comparación con los lenguajes de enlace estático.
+
+"tipo real y declarado"
+# En Python, no existe una distinción explícita entre "tipo real" y "tipo declarado" como la que se encuentra en algunos lenguajes de programación estáticamente tipados, como C o Java. En los lenguajes estáticamente tipados, se debe declarar el tipo de una variable antes de utilizarla, y el tipo de una variable es conocido y verificado en tiempo de compilación.
+
+# En Python, es un lenguaje de tipado dinámico y fuertemente tipado, lo que significa que las variables pueden cambiar de tipo durante la ejecución del programa y que los tipos son importantes para el correcto funcionamiento del código, pero no es necesario declarar el tipo de una variable de antemano. En lugar de "tipo real" y "tipo declarado", en Python se habla más comúnmente de "tipo dinámico" y "tipo inferido".
+
+# - **Tipo Dinámico**: En Python, el tipo de una variable es determinado en tiempo de ejecución según el valor al que se le asigne. Esto significa que puedes asignar un valor de un tipo a una variable y luego cambiar el tipo de esa variable asignándole un valor de otro tipo más tarde en el programa.
+
+# Ejemplo:
+
+
+x = 5  # x es de tipo int (entero)
+x = "Hola"  # x ahora es de tipo str (cadena)
+
+# - **Tipo Inferido**: Python infiere automáticamente el tipo de una variable en función del valor que se le asigna. No necesitas declarar explícitamente el tipo de una variable; Python lo determina por sí mismo.
+
+# Python también proporciona funciones y operadores para verificar y convertir tipos cuando sea necesario. Por ejemplo, puedes usar las funciones `type()` para verificar el tipo de una variable y las funciones de conversión como `int()`, `str()`, `float()`, etc., para cambiar el tipo de una variable según sea necesario.
+
+# En resumen, en Python, no se habla comúnmente de "tipo real" y "tipo declarado" como en algunos lenguajes de programación estática, sino más bien de "tipo dinámico" (determinado en tiempo de ejecución) y "tipo inferido" (determinado automáticamente por Python en función del valor asignado). Esto es una de las características clave del tipado dinámico en Python.
 
 "Encapsulamiento"
 # Es una forma de proteger ciertas partes del código para que nisiquiera el desarrollador pueda acceder, no existe en python pero si en otros idiomas (los famosos private y public), aunque en python se puede intentar aplicar de otra forma, no son privados de verdad

@@ -127,3 +127,5 @@ isaac.do_activity()
 # Como ves es como heredar clases, la diferencia es que debes implementar los métodos abstractos que escribiste, de lo contrario el código no funcionará
 # Evita errores de "instaciar" clases base
 # Se asegura el polimorfismo
+
+"Continua en Intermedio poo 3"
