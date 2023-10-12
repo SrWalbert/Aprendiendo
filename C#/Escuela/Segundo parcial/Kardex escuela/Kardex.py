@@ -51,10 +51,10 @@ promedio = (
 ) / 5
 
 # Rebrobar  o no
-if promedio <= 6:
-    estatus_del_estudiante = "Reprobado"
-else:
+if promedio >= 6:
     estatus_del_estudiante = "Aprobado"
+else:
+    estatus_del_estudiante = "Reprobado"
 
 # Mostrar información
 
