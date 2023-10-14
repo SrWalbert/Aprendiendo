@@ -240,7 +240,55 @@ def saludo_de_ejemplo_2():
 
 saludo_de_ejemplo_2()
 
-# Investigar sobre decoradores
+"Otros decoradores"
+
+# @staticmethod: Se utiliza para definir un método estático en una clase. No recibe una referencia implícita a una instancia.
+# @staticmethod
+# def ejemplo():
+#     pass
+
+
+# @classmethod: Se usa para definir un método de clase en Python. Recibe la clase como argumento en lugar de la instancia.
+# @classmethod
+# def ejemplo(cls):
+#     pass
+
+
+# @property: Se utiliza para definir un método como una propiedad, permitiendo el acceso a ella como un atributo.
+# @property
+# def ejemplo(self):
+#     return self._ejemplo
+
+
+# @abstractmethod: Se utiliza en clases abstractas y asegura que las subclases implementen un método particular.
+# from abc import ABC, abstractmethod
+
+# class Ejemplo(ABC):
+#     @abstractmethod
+#     def metodo_abstracto(self):
+#         pass
+
+
+# @decorador_personalizado: Los decoradores personalizados son funciones que extienden el comportamiento de otras funciones.
+# def decorador_personalizado(func):
+#     def wrapper(*args, **kwargs):
+#         Aquí va la lógica personalizada
+#         return func(*args, **kwargs)
+#     return wrapper
+
+# @decorador_personalizado
+# def funcion_ejemplo():
+#     pass
+
+
+# @lru_cache: Se utiliza para implementar un caché de resultados con tamaño limitado utilizando el algoritmo "Least Recently Used".
+# from functools import lru_cache
+
+# @lru_cache(maxsize=32)
+# def fib(n):
+#     if n < 2:
+#         return n
+#     return fib(n-1) + fib(n-2)
 
 
 "Continua en Intermedio 2"
