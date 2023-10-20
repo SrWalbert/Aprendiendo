@@ -8,6 +8,6 @@ class MiExeception(Exception):
 # raise lanza excepciones
 
 try:
-    raise MiExeception("Error code w1e")
+    raise
 except:
-    print("Cometiste un error ")
+    MiExeception("Error code w1e")
