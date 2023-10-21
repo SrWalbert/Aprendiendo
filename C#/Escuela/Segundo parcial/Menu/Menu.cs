@@ -1,5 +1,5 @@
 using System;
-namespace Manu
+namespace Menu
 {
     class Program
     {
