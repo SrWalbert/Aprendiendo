@@ -3,9 +3,6 @@
 # Son funciones que tienen un nombre especial reservado, inician y terminan con dos guiones bajos
 
 
-from tkinter import W
-
-
 class Persona:
     def __init__(self, nombre: str, edad: int) -> None:
         self.nombre = nombre
