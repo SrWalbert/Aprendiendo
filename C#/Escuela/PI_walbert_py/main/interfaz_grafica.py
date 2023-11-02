@@ -4,7 +4,7 @@ En este archivo se escribe todo lo relacionado con la interfaz gráfica, tanto p
 
 # Importando los módulos o librerías necesarias
 """Por ahora estaremos trabajando con la librería Tkinder para las interfaces graficas"""
-import tkinder
+import tkinter
 
 
 root = Tk()
