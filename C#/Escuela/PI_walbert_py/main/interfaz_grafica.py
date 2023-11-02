@@ -8,4 +8,9 @@ import tkinter
 
 
 root = Tk()
+root.title("Analisis de datos")
+root.iconbitmap("logo_data_analisis.ico")
+root.geometry("800x600")
+
+
 root.mainloop()
