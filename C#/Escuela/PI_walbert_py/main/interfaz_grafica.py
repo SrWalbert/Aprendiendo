@@ -6,11 +6,16 @@ En este archivo se escribe todo lo relacionado con la interfaz gráfica, tanto p
 """Por ahora estaremos trabajando con la librería Tkinder para las interfaces graficas"""
 import tkinter
 
-
-root = Tk()
+# Desarrollando el programa
+"""Iniciando la raíz y configuraciones básicas"""
+root = tkinter.Tk()
 root.title("Analisis de datos")
-root.iconbitmap("logo_data_analisis.ico")
-root.geometry("800x600")
+# root.iconbitmap(bitmap="\\main\\logo_data_analisis.ico")
+root.config()
 
+# Creando un frame
+first_frame = tkinter.Frame()
+first_frame.pack()
+first_frame.config(width=600, height=800)
 
 root.mainloop()
