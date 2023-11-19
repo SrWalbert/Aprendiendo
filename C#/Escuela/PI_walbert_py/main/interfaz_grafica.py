@@ -10,7 +10,7 @@ import tkinter
 """Iniciando la raíz y configuraciones básicas"""
 root = tkinter.Tk()
 root.title("Analisis de datos")
-# root.iconbitmap(bitmap="\\main\\logo_data_analisis.ico")
+root.iconbitmap(bitmap=".\\logo_data_analisis.ico")
 root.config()
 
 # Creando un frame
