@@ -49,3 +49,16 @@ def conversor_far_a_celc(farengheit: float) -> float:
 
 
 print(conversor_far_a_celc(grados_farengeit_dados))
+
+
+"""------------------------------------------------------------"""
+"""Convertidor a euros"""
+euros_a_convertir = input("Cuántos euros tienes: ")
+euros_a_convertir: float = float(euros_a_convertir)
+
+
+def conversor_eur_lib(euros: float) -> float:
+    return euros * 1.15
+
+
+print(f"Tu cantidad en libras es de: {conversor_eur_lib(euros_a_convertir)}")
