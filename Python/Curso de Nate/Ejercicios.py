@@ -58,6 +58,14 @@ euros_a_convertir: float = float(euros_a_convertir)
 
 
 def conversor_eur_lib(euros: float) -> float:
+    """Convierte euros a libras multiplicandolos por 1.15
+
+    Args:
+        euros (float): a convetir
+
+    Returns:
+        float: convertido
+    """
     return euros * 1.15
 
 
