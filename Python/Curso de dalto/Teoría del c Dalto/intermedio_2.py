@@ -96,12 +96,12 @@ def suma(*numeros_sum):
 # recordemos que sum() suma iterables
 
 
-# De esta manera args no requiere ir al último, pero en este caso necesitará una lista como valor de entrada
+# De esta manera args no requiere ir al último de los datos de entrada, pero en este caso necesitará una lista como valor de entrada
 def suma2(numeros_sum_2):
     return sum([*numeros_sum_2])
 
 
-# Se debe pasar un lista
+# Se debe pasar un lista, usando la forma dos
 print(suma(5, 3, 9, 90, 8))
 print(suma2([5, 3, 9, 90, 8]))
 
