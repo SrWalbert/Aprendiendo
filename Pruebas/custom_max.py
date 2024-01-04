@@ -2,6 +2,8 @@
 Crea una función custom que funcione igual que max
 """
 
+import sys
+
 
 def custom_max(*args: int | float) -> int | float:
     """Tomando una conjunto de números, encuentra el mas grande
@@ -22,4 +24,10 @@ def custom_max(*args: int | float) -> int | float:
     return max_number
 
 
-print(custom_max(1, 2, 6, 8, 12, 9, 15, 26, 148, 98, 100, 0.3))
+def main(*args: None) -> int:
+    print(custom_max(1, 2, 6, 8, 12, 9, 15, 26, 148, 98, 100, 0.3))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
