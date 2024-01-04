@@ -1,9 +1,10 @@
 """Hacer un programa que de los numeros de la secuencia de fibonacci"""
 import sys
-from time import perf_counter
+import time
+from typing import Callable
 
 
-def fibonnacci(maximus: int) -> list:
+def fibonnacci(maximus: int) -> list[int]:
     a, b = 0, 1
     lista_fibonacci = list([0])
     for i in range(maximus):
@@ -14,14 +15,22 @@ def fibonnacci(maximus: int) -> list:
             a, b = b, a + b
 
 
-optimized_fib = (
+optimized_fib: Callable[..., int] = (
     lambda n, a=0, b=1, res=[]: res if b > n else optimized_fib(n, b, a + b, res + [b])
 )
 
 
-def main(*args: None) -> None:
-    print(fibonnacci(50))
-    print(optimized_fib(100))
+def main(*args: None) -> int:
+    start1 = time.time()
+    optimized_fib(6000000000)
+    end1 = time.time()
+    start2 = time.time()
+    fibonnacci(6000000000)
+    end2 = time.time()
+
+    print(f"Optimized fib: {end1-start1}")
+    print(f"fib: {end2-start2}")
+    return 0
 
 
 if __name__ == "__main__":
