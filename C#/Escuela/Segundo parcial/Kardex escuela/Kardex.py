@@ -1,4 +1,3 @@
-# El c# está muy feo de trabajar, voy a usar python, si no le molesta
 import sys
 
 
