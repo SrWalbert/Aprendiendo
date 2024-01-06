@@ -1,7 +1,7 @@
 using System;
 namespace Kardex
 {
-    public class HelloWorld
+    public class NewProgram
     {
         public static void Main(string[] args)
         {
