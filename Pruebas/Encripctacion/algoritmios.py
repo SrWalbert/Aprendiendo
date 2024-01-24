@@ -5,9 +5,8 @@ import re
 
 
 """-----------Codigo-----------"""
-# Diccionario de palabras:
-# Creación de un diccionario con las letras del alfabeto latino como claves y los números del 1 al 27 como valores.
-alfabeto = "abcdefghijklmnopqrstuvwxyz"
+# Alfabeto para usar
+ALFABERTO = "abcdefghijklmnopqrstuvwxyz"
 
 
 def en_cesar(key: str, input_: str, checked: bool = False) -> str:
@@ -25,21 +24,21 @@ def en_cesar(key: str, input_: str, checked: bool = False) -> str:
     if not checked:
         key = key.lower()
         input_ = input_.lower()
-        if (len(key) == 1) and (key in alfabeto):
-            desplazamiento: int = alfabeto.index(key) + 1
+        if (len(key) == 1) and (key in ALFABERTO):
+            desplazamiento: int = ALFABERTO.index(key) + 1
         else:
             return (
                 "Llave inválida, intente con una llave de un solo caracter alfabético"
             )
     else:
-        desplazamiento: int = alfabeto.index(key) + 1
+        desplazamiento: int = ALFABERTO.index(key) + 1
 
     texto_cifrado: str = ""
 
     for letra in input_:
-        if letra in alfabeto:
-            posicion_nueva: int = (alfabeto.index(letra) + desplazamiento) % 26
-            letra_nueva: int = alfabeto[posicion_nueva]
+        if letra in ALFABERTO:
+            posicion_nueva: int = (ALFABERTO.index(letra) + desplazamiento) % 26
+            letra_nueva: int = ALFABERTO[posicion_nueva]
             texto_cifrado += letra_nueva
         else:
             texto_cifrado += letra
@@ -59,21 +58,21 @@ def desen_cesar(key: str, cifrado: str, checked: bool = False) -> str:
     if not checked:
         key = key.lower()
         cifrado = cifrado.lower()
-        if (len(key) == 1) and (key in alfabeto):
-            desplazamiento: int = -alfabeto.index(key) - 1
+        if (len(key) == 1) and (key in ALFABERTO):
+            desplazamiento: int = -ALFABERTO.index(key) - 1
         else:
             return (
                 "Llave inválida, intente con una llave de un solo caracter alfabético"
             )
     else:
-        desplazamiento: int = -alfabeto.index(key) - 1
+        desplazamiento: int = -ALFABERTO.index(key) - 1
 
     texto_descifrado: str = ""
 
     for letra in cifrado:
-        if letra in alfabeto:
-            posicion_nueva: int = (alfabeto.index(letra) + desplazamiento) % 26
-            letra_nueva: int = alfabeto[posicion_nueva]
+        if letra in ALFABERTO:
+            posicion_nueva: int = (ALFABERTO.index(letra) + desplazamiento) % 26
+            letra_nueva: int = ALFABERTO[posicion_nueva]
             texto_descifrado += letra_nueva
         else:
             texto_descifrado += letra
@@ -94,7 +93,7 @@ def en_vigenere(clave: str, input_: str) -> str:
     clave = clave.lower()
     input_ = input_.lower()
     for letra in clave:
-        if letra not in alfabeto:
+        if letra not in ALFABERTO:
             return (
                 "Llave inválida, intente con una llave de solo caracteres alfabéticos"
             )
@@ -113,7 +112,7 @@ def desen_vigenere(clave: str, cifrado: str) -> str:
     clave = clave.lower()
     cifrado = cifrado.lower()
     for letra in clave:
-        if letra not in alfabeto:
+        if letra not in ALFABERTO:
             return (
                 "Llave inválida, intente con una llave de solo caracteres alfabéticos"
             )
