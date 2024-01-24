@@ -81,7 +81,17 @@ def desen_cesar(key: str, cifrado: str, checked: bool = False) -> str:
     return texto_descifrado
 
 
-def en_viguenere(clave: str, input_: str) -> str:
+def en_vigenere(clave: str, input_: str) -> str:
+    """Encripta textos en cifrado vigenere
+
+    Args:
+        clave (str): Secuencia de letras sin espacios con la que encriptan los textos en cesar
+        input_ (str): Texto a encriptar
+
+    Returns:
+        str: Texto encriptado
+    """
+
     clave = clave.lower()
     input_ = input_.lower()
     for letra in clave:
