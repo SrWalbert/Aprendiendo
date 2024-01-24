@@ -108,3 +108,23 @@ def en_vigenere(clave: str, input_: str) -> str:
         nuevo_char = en_cesar(char_clave, char_input, checked=True)
         texto_cifrado += nuevo_char
     return texto_cifrado
+
+
+def desen_vigenere(clave: str, cifrado: str) -> str:
+    clave = clave.lower()
+    cifrado = cifrado.lower()
+    for letra in clave:
+        if letra not in alfabeto:
+            return (
+                "Llave inválida, intente con una llave de solo caracteres alfabéticos"
+            )
+
+    texto_descifrado: str = ""
+    clave_extendida: str = (clave * (len(cifrado) // len(clave))) + clave[
+        : len(cifrado) % len(clave)
+    ]
+
+    for char_clave, char_cifrado in zip(clave_extendida, cifrado):
+        nuevo_char: str = desen_cesar(char_clave, char_cifrado, checked=True)
+        texto_descifrado += nuevo_char
+    return texto_descifrado
