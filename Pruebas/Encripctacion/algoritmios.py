@@ -8,7 +8,6 @@ import re
 # Diccionario de palabras:
 # Creación de un diccionario con las letras del alfabeto latino como claves y los números del 1 al 27 como valores.
 alfabeto = "abcdefghijklmnopqrstuvwxyz"
-diccionario: dict[str, int] = {letra: indice for letra, indice in enumerate(alfabeto)}
 
 
 def en_cesar(key: str, input_: str, checked: bool = False) -> str:
