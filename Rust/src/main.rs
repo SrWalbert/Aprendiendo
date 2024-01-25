@@ -1,65 +1,23 @@
-const ALFABETO: &str = "abcdefghijklmnopqrstuvwxyz";
-
-fn en_cesar(key: &str, input: &str, checked: bool) -> String {
-    let mut desplazamiento: usize = 0;
-    let key = key.to_lowercase();
-    let input = input.to_lowercase();
-
-    if !checked {
-        if key.len() == 1 && ALFABETO.contains(key.chars().next().unwrap()) {
-            desplazamiento = ALFABETO.find(key.chars().next().unwrap()).unwrap() + 1;
+fn cifrado_cesar(texto: &str, desplazamiento: i32) -> String {
+    texto.chars().map(|c| {
+        if c.is_alphabetic() {
+            let inicio = if c.is_uppercase() { 'A' } else { 'a' } as i32;
+            // Convertir el caracter a un número (0-25), aplicar desplazamiento y volver a convertir a caracter
+            let mut desplazado = (c as i32 - inicio + desplazamiento) % 26;
+            if desplazado < 0 {
+                desplazado += 26;
+            }
+            (inicio + desplazado) as u8 as char
         } else {
-            return "Llave inválida, intente con una llave de un solo caracter alfabético".to_string();
+            // Si no es una letra, dejar el caracter como está
+            c
         }
-    } else {
-        desplazamiento = ALFABETO.find(key.chars().next().unwrap()).unwrap() + 1;
-    }
-
-    let mut texto_cifrado = String::new();
-    for letra in input.chars() {
-        if ALFABETO.contains(letra) {
-            let posicion_nueva = (ALFABETO.find(letra).unwrap() + desplazamiento) % 26;
-            let letra_nueva = ALFABETO.chars().nth(posicion_nueva).unwrap();
-            texto_cifrado.push(letra_nueva);
-        } else {
-            texto_cifrado.push(letra);
-        }
-    }
-    texto_cifrado
+    }).collect()
 }
 
-fn desen_cesar(key: char, cifrado: &str, checked: bool) -> String {
-    let alfabeto = "abcdefghijklmnopqrstuvwxyz";
-    let mut desplazamiento = 0;
-
-    if !checked {
-        let key = key.to_lowercase().next().unwrap();
-        let cifrado = cifrado.to_lowercase();
-
-        if alfabeto.contains(key) {
-            desplazamiento = -alfabeto.find(key).unwrap() as isize - 1;
-        } else {
-            return String::from("Llave inválida, intente con una llave de un solo caracter alfabético");
-        }
-    } else {
-        desplazamiento = -alfabeto.find(key).unwrap() as isize - 1;
-    }
-
-    let mut texto_descifrado = String::new();
-
-    for letra in cifrado.chars() {
-        if alfabeto.contains(letra) {
-            let posicion_actual = alfabeto.find(letra).unwrap() as isize;
-            let posicion_nueva = ((posicion_actual + desplazamiento).rem_euclid(26)) as usize;
-            let letra_nueva = alfabeto.chars().nth(posicion_nueva).unwrap();
-            texto_descifrado.push(letra_nueva);
-        } else {
-            texto_descifrado.push(letra);
-        }
-    }
-
-    texto_descifrado
-}
 fn main() {
-    println!("Encriptado en cesar: {}", en_cesar("c", "Hola mundo"));
+    let texto = "Hola Mundo";
+    let desplazamiento = 3; // Puede ser cualquier número
+    let texto_cifrado = cifrado_cesar(texto, desplazamiento);
+    println!("Texto cifrado: {}", texto_cifrado);
 }
