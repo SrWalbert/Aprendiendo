@@ -1,18 +1,19 @@
 fn cifrado_cesar(texto: &str, desplazamiento: i32) -> String {
     texto.chars().map(|c| {
-        if c.is_alphabetic() {
-            let inicio = if c.is_uppercase() { 'A' } else { 'a' } as i32;
-            // Convertir el caracter a un número (0-25), aplicar desplazamiento y volver a convertir a caracter
-            let mut desplazado = (c as i32 - inicio + desplazamiento) % 26;
-            if desplazado < 0 {
-                desplazado += 26;
+            if c.is_alphabetic() {
+                let inicio = if c.is_uppercase() { 'A' } else { 'a' } as i32;
+                // Convertir el caracter a un número (0-25), aplicar desplazamiento y volver a convertir a caracter
+                let mut desplazado = (c as i32 - inicio + desplazamiento) % 26;
+                if desplazado < 0 {
+                    desplazado += 26;
+                }
+                (inicio + desplazado) as u8 as char
+            } else {
+                // Si no es una letra, dejar el caracter como está
+                c
             }
-            (inicio + desplazado) as u8 as char
-        } else {
-            // Si no es una letra, dejar el caracter como está
-            c
         }
-    }).collect()
+    ).collect()
 }
 
 fn main() {
