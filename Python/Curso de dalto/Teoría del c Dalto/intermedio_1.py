@@ -36,25 +36,25 @@ print(conjunto_3)
 # En teoría de conjuntos, teniendo a{1,2,3} y b{1,2,3,4,5}, dependiendo de la perspectiva y cuál tomemos de conjunto: a es subconjunto del conjunto b; ó b es un superconjunto del conjunto a
 
 # Verificando si es subconjunto
-conjunto_a = {1, 2, 3, 5, 7, -70}
-conjunto_b = {1, 3, 7}
+conjunto_a: set[int] = {1, 2, 3, 5, 7, -70}
+conjunto_b: set[int] = {1, 3, 7}
 # tanto .issubset como <= harían lo mismo
-es_sub_conjunto_de = conjunto_b.issubset(conjunto_a)
+es_sub_conjunto_de: bool = conjunto_b.issubset(conjunto_a)
 es_sub_conjunto_de = conjunto_b <= conjunto_a
 print(es_sub_conjunto_de)  # Booleano
 
 # Verificando si es super conjunto de
 # tanto .issuperset como > harían lo mismo
-es_super_conjunto_de = conjunto_b.issuperset(conjunto_a)
+es_super_conjunto_de: bool = conjunto_b.issuperset(conjunto_a)
 es_super_conjunto_de = conjunto_b > conjunto_a
 print(es_super_conjunto_de)  # Booleano
 
 # Verificando si los conjuntos son diferentes, si almenos hay un valor en común el resultado será false
-son_conjuntos_diferentes = conjunto_a.isdisjoint(conjunto_b)
+son_conjuntos_diferentes: bool = conjunto_a.isdisjoint(conjunto_b)
 print(son_conjuntos_diferentes)
 
 # con not hacemos que verifiqu si hay datos iguales, se es así da true (lo contrario a lo anterior)
-tiene_al_menos_un_dato_igual = not conjunto_a.isdisjoint(conjunto_b)
+tiene_al_menos_un_dato_igual: bool = not conjunto_a.isdisjoint(conjunto_b)
 print(tiene_al_menos_un_dato_igual)
 
 

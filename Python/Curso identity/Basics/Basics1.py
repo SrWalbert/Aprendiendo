@@ -12,3 +12,21 @@ numero_gigante = 1_000_000_000
 a = 5
 a += 3
 a -= 3
+a *= 3
+a /= 3
+# Y demás operadores
+
+# Con punto y coma se pueden seleccionar elementos con indices desde un punto a otro, se incluye el primer numero, pero no el segundo.
+# print(lista[a:b])
+
+
+#
+# Además del desempaquetado de tuplas que ya conocemos, se puede añadir un asterisco para que a la segunda variable se le aplique lo demás
+
+tupla_asignable: tuple = "mi amigo", True, 5
+a, *b = tupla_asignable
+
+set1 = {"a,", True}
+print(dir(set1))
+
+# añadir los metodos que faltan a intermedio 1 de dalto

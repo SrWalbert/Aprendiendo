@@ -75,7 +75,7 @@ tupla_uno = tuple(("hola", "me llamo", "isaac", 8))  # Tupla
 
 print(dir(set[3, 2, True, False]))  # Conjunto
 # En el conjunto solo se pueden sacar y remover elementos, pero no agregarlos, ni ver el indice. Pero si se puede hacer las otras cosas
-
+# Nt: ahora hay metodos para agregar cosas, contar elementos dentro
 
 "Metodos a los diccionarios"
 
