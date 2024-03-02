@@ -23,6 +23,8 @@ print(bool())
 # all() trabaja con lo anterior mencionado, si todo es verdadero es True, si hay un solo elemento de las caracteristicas de falso, devuelve False.
 print(all(["Ejemplo de lista", 5432, 42, 245, True, True, "texto"]))
 
+# En la mayoría de casos se prefiere esta forma
+print(True if ["Ejemplo de lista", 5432, 42, 245, True, True, "texto"] else False)
 # sum() devuelve la suma de todos los iterables
 print(sum(numeros_1))  # devuelven excepciones si no se les da números
 
@@ -68,7 +70,7 @@ def n_contrasena(num):
     return contrasena
 
 
-# Para mostrar lo oculto, podemos trabajar conlo que pusimos en return fuera de la función
+# Para mostrar lo oculto, podemos trabajar con lo que pusimos en return fuera de la función
 def p_n_contrasena(num):
     print(f"Tu nueva contraseña es {n_contrasena(num)}")
 

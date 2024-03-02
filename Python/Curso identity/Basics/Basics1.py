@@ -30,3 +30,10 @@ set1 = {"a,", True}
 print(dir(set1))
 
 # añadir los metodos que faltan a intermedio 1 de dalto
+
+
+# ---------------------------
+
+# if en una sola linea
+# Haz_esto if True else Haz_esto_otro
+# resultado = a if True else b
