@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=7" />
+		<link rel="stylesheet" href="normalize.css" />
+		<link rel="stylesheet" href="trabajo_1_pgs_wb.css" />
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$(".sidebar ul li a").click(function (e) {
+					e.preventDefault();
+					var target = $(this).attr("href");
+					$("html, body").animate(
+						{
+							scrollTop: $(target).offset().top,
+						},
+						1000
+					);
+				});
+			});
+		</script>
+		<title>Mi primera pagina web</title>
+	</head>
+	<body>
+		<header>
+			<h1>Este es un ejercicio de incluir archivos y trabajos de la clase de <b>Arechiga</b></h1>
+		</header>
+		<aside class="sidebar">
+			<ul>
+				<li><a href="#evidencias">Evidencias</a></li>
+				<li><a href="#documentos">Documentos</a></li>
+				<li><a href="#text">Texto</a></li>
+				<li><a href="#logo">Logo</a></li>
+				<li><a href="#video_de_la_pagina">Video</a></li>
+				<li><a href="#Tabla">Tabla</a></li>
+				<li><a href="#Enlaces">Enlaces</a></li>
+			</ul>
+		</aside>
+		<main>
+			<section id="evidencias">
+				<iframe
+					src="https://drive.google.com/file/d/1WIeUfQt7nQwjxvjmMEvPzZ48yiJMK_P-/preview"
+					width="640"
+					height="480"
+					allow="autoplay"
+				></iframe>
+				<iframe
+					src="https://drive.google.com/file/d/16Yj4bCQozrHKPYz_9otjFvg-l8y5ZKv3/preview"
+					width="640"
+					height="480"
+					allow="autoplay"
+				></iframe>
+			</section>
+
+			<section id="documentos">
+				<embed
+					src="https://docs.google.com/document/d/1GMTqTwkLNE1PhT6qEZg-A8oxiFy70pmU5Xt3qjOxnsY/edit?usp=sharing"
+					alt="Mi Diccionario de etiquetas html"
+					width="640"
+					height="480"
+				/>
+				<h3>Nuestra presentación de empresa</h3>
+				<embed
+					id="presentacion"
+					src="https://docs.google.com/document/d/1zVUgxQcV78LZ4ZWTorFp3lMYoOYFG0rLL4esqXT6kFg/edit?usp=sharing"
+					width="640"
+					height="480"
+				/>
+				<a href="https://docs.google.com/document/d/1zVUgxQcV78LZ4ZWTorFp3lMYoOYFG0rLL4esqXT6kFg/edit?usp=sharing"
+					>Visítalo Aquí</a
+				>
+			</section>
+
+			<section id="text">
+				<p>
+					Ejemplo de texto es este: <b>Lorem ipsum</b>
+					<i
+						>dolor sit amet consectetur adipisicing elit. Dolor necessitatibus eaque odio commodi vero deserunt sint
+						nisi, cumque optio sunt, iure reiciendis earum dicta doloremque velit! Repudiandae reiciendis quia
+						maiores?</i
+					>
+				</p>
+			</section>
+
+			<section id="logo">
+				<h3>Logo de nuestra empresa</h3>
+				<iframe
+					src="https://drive.google.com/file/d/1JX641J-mtIaFnXbimAw3LX41b8m-as1y/preview"
+					width="250"
+					height="250"
+					allow="autoplay"
+				></iframe>
+			</section>
+			<section id="video_de_la_pagina">
+				<iframe
+					src="https://drive.google.com/file/d/1fcqiQ4i0K0RQhG4TFdQ2cSlkQdCiOTh6/preview"
+					width="640"
+					height="480"
+					allow="autoplay"
+				></iframe>
+			</section>
+			<section id="Tabla">
+				<h2>Tabla de evidencias</h2>
+				<table border="1">
+					<tr>
+						<td>FECHA</td>
+						<td>IMAGEN</td>
+						<td>¿QUÉ ES?</td>
+					</tr>
+					<tr>
+						<td>SESION1 06-09 DE FEB 2024</td>
+						<td>
+							<iframe
+								src="https://drive.google.com/file/d/1WIeUfQt7nQwjxvjmMEvPzZ48yiJMK_P-/preview"
+								width="640"
+								height="480"
+								allow="autoplay"
+							></iframe>
+						</td>
+						<td>Nuevo correo electrónico para la pyme</td>
+					</tr>
+					<tr>
+						<td>SESION2 12-16 DE FEB 2024</td>
+						<td>
+							<iframe
+								src="https://drive.google.com/file/d/1lBUZLiM8TCS7KtXV50oXTBdeUAmTB6YX/preview"
+								width="640"
+								height="480"
+								allow="autoplay"
+							></iframe>
+						</td>
+						<td>Primer acercamiento a html</td>
+					</tr>
+					<tr>
+						<td>SESION3 19-23 DE FEB 2024</td>
+						<td>
+							<iframe
+								src="https://drive.google.com/file/d/13AamHrdDjSUpg1QXpA6ziAg3B7vc01Vz/preview"
+								width="640"
+								height="480"
+								allow="autoplay"
+							></iframe>
+						</td>
+						<td>Quizz: Subir todo a la nube, refactorizar código</td>
+					</tr>
+					<tr>
+						<td>Hacer tabla</td>
+						<td>
+							<iframe
+								src="https://drive.google.com/file/d/1zyXJwa7BEK1ssOu9gWSs-l3xtnOnlfMZ/preview"
+								width="640"
+								height="480"
+								allow="autoplay"
+							></iframe>
+						</td>
+						<td>Hacer esta tabla</td>
+					</tr>
+				</table>
+			</section>
+			<section id="Enlaces">
+				<nav>
+					<a href="https://www.google.com">Google</a>
+					<a href="https://www.wikipedia.org">Wikipedia</a>
+					<a href="https://www.youtube.com">YouTube</a>
+				</nav>
+			</section>
+		</main>
+	</body>
+</html>

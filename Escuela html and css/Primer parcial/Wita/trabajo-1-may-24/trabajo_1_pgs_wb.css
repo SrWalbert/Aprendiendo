@@ -1,0 +1,177 @@
+body {
+	background-color: #7dbf7f;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	text-align: center;
+	margin: 20px 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section {
+	margin: 20px 0;
+}
+
+iframe {
+	width: 100%;
+	max-width: 640px;
+	height: 480px;
+}
+.documento {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.documento embed {
+	max-width: 600px;
+	aspect-ratio: 16/9;
+}
+
+.documento h3 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.documento a {
+	text-decoration: none;
+	color: blue;
+}
+
+.documento a:hover {
+	text-decoration: underline;
+}
+
+p {
+	text-align: justify;
+	font-size: large;
+	margin: 0 20px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 30px;
+	padding: 20px;
+}
+
+a {
+	font-size: 20px;
+	text-align: center;
+	margin: 10px 0;
+	display: block;
+}
+.logo iframe {
+	width: 325px;
+	height: 325px;
+}
+
+/* -----TABLA----- */
+.Tabla {
+	background-color: #f2f2f2;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.Tabla h2 {
+	color: #333;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.Tabla table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.Tabla table th,
+.Tabla table td {
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+
+.Tabla table th {
+	background-color: #4caf50;
+	color: white;
+}
+
+.Tabla table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.Tabla table tr:hover {
+	background-color: #ddd;
+}
+/* -----TABLA----- */
+/* -----Barra lateral----- */
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 200px;
+	height: 100%;
+	background-color: #f4f4f4;
+	padding: 20px;
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sidebar ul li {
+	margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	display: block;
+}
+.sidebar ul li a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	display: block;
+	padding: 10px 15px; /* Agrega un poco de espacio alrededor del texto */
+	border-radius: 5px; /* Hace que los bordes sean redondeados */
+	background-color: #006400; /* Cambia el color de fondo a verde oscuro */
+}
+.sidebar a {
+	color: #fff;
+	text-decoration: none;
+}
+.sidebar ul li a:hover {
+	color: #fff; /* Cambia el color del texto a blanco cuando se pasa el mouse */
+}
+
+.sidebar ul li a:hover {
+	color: #007bff;
+}
+/* -----Barra lateral----- */
+/* -----Enlaces II----- */
+nav {
+	background-color: #006400; /* Cambiar el color de fondo a verde oscuro */
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+}
+nav a:hover {
+	background-color: #008000; /* Cambiar el color de fondo al pasar el ratón a un verde más claro */
+}
+
+/* -----Enlaces II----- */
