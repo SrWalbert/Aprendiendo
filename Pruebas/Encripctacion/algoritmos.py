@@ -1,9 +1,5 @@
 """Encriptar en codigo cesar y viguenere"""
 
-"""Ayuda en textos"""
-import re
-
-
 """-----------Codigo-----------"""
 # Alfabeto para usar
 ALFABERTO = "abcdefghijklmnopqrstuvwxyz"
@@ -103,7 +99,7 @@ def en_vigenere(clave: str, input_: str) -> str:
     ]
 
     for char_clave, char_input in zip(clave_extendida, input_):
-        nuevo_char = en_cesar(char_clave, char_input, checked=True)
+        nuevo_char: str = en_cesar(char_clave, char_input, checked=True)
         texto_cifrado += nuevo_char
     return texto_cifrado
 

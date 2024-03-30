@@ -15,7 +15,13 @@ main {
 	flex-direction: column;
 	align-items: center;
 }
+main,
+header,
+footer {
+	position: fixed;
 
+	left: 6em;
+}
 section {
 	margin: 20px 0;
 }
@@ -120,6 +126,7 @@ a {
 	height: 100%;
 	background-color: #f4f4f4;
 	padding: 20px;
+	width: 10em;
 }
 
 .sidebar ul {
