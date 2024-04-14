@@ -1,0 +1,73 @@
+html,
+body {
+	height: 100%;
+}
+
+.header {
+	background-color: #000000;
+	height: 100px;
+}
+
+.header img {
+	width: 9vh;
+	display: block;
+	margin: auto;
+}
+
+main {
+	flex: 1;
+	margin: 30px, 0;
+}
+
+body {
+	background-image: url("../imagenes/fondo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+footer {
+	margin: 0;
+	bottom: 0;
+	position: fixed;
+	height: 11.7vh;
+	padding-top: 2vh;
+	padding-bottom: 0vh;
+	width: 100%;
+	background-color: black;
+}
+
+footer h5 {
+	color: whitesmoke;
+	float: right;
+}
+
+footer img {
+	float: left;
+	height: 8vmin;
+}
+
+.image-container {
+	position: absolute;
+	border: 2px outset #f3f8f7;
+}
+
+.image-container img {
+	height: 150px;
+	width: 250px;
+}
+
+.image-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0); /* Inicialmente transparente */
+	opacity: 0;
+	transition: background-color 0.3s, opacity 0.3s;
+}
+
+.image-container:hover .image-overlay {
+	background-color: rgba(24, 24, 55, 0.5); /* Oscurece el fondo */
+	opacity: 1; /* Hace visible la superposición */
+}
