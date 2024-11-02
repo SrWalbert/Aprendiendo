@@ -6,7 +6,7 @@ def main(*args: None) -> int:
     print(
         al.en_vigenere(
             "Ellas",
-            "",
+            "Lorem ipsum dolor sit amet",
         )
     )
     return 0
