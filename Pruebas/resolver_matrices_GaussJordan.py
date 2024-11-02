@@ -1,4 +1,5 @@
 import numpy as np
+import sys
 
 # Definimos la matriz aumentada del sistema
 augmented_matrix = np.array(
@@ -29,9 +30,16 @@ def gauss_jordan_elimination(matrix):
     return matrix
 
 
-# Ejecutamos el método de Gauss-Jordan
-reduced_matrix = gauss_jordan_elimination(augmented_matrix.copy())
-print(reduced_matrix)
-# Extraemos las soluciones para X1, X2 y X3
-solutions = reduced_matrix[:, -1]
-print(solutions)
+def main(*args: None) -> int:
+    # Ejecutamos el método de Gauss-Jordan
+    reduced_matrix = gauss_jordan_elimination(augmented_matrix.copy())
+    print(reduced_matrix)
+    # Extraemos las soluciones para X1, X2 y X3
+    solutions = reduced_matrix[:, -1]
+    print(solutions)
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
