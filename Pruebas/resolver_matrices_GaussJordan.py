@@ -19,6 +19,7 @@ def gauss_jordan_elimination(matrix):
     return matrix
 
 
+# La comprobación está pendiente de ser arreglada
 def comprobation(original_matrix, solution_vector) -> bool:
     original_rows, original_cols = original_matrix.shape
     original_solutions = original_matrix[:, -1]
@@ -46,13 +47,13 @@ def main(*args: None) -> int:
         dtype=float,
     )
     # Ejecutamos el método de Gauss-Jordan
-    reduced_matrix = gauss_jordan_elimination(augmented_matrix.copy())
-    print(reduced_matrix)
+    resolved_matrix = gauss_jordan_elimination(augmented_matrix.copy())
+    print(resolved_matrix)
     # Extraemos las soluciones para X1, X2 y X3
-    solutions = reduced_matrix[:, -1]
+    solutions = resolved_matrix[:, -1]
     print("Soluciones: ", solutions)
 
-    print("Está correcto", comprobation(augmented_matrix, solutions))
+    print("¿Está correcto?", comprobation(augmented_matrix, solutions))
     return 0
 
 
