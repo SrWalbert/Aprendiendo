@@ -19,18 +19,11 @@ def gauss_jordan_elimination(matrix):
     return matrix
 
 
-# La comprobación está pendiente de ser arreglada
-def comprobation(original_matrix, solution_vector) -> bool:
-    original_rows, original_cols = original_matrix.shape
-    original_solutions = original_matrix[:, -1]
-    for i in range(original_rows):
-        for j in range(original_cols - 1):
-            for k in solution_vector:
-                if j * k in [solution for solution in original_solutions]:
-                    continue
-                else:
-                    return False
-    return True
+def comprobation(original_aumented_matrix, solution_vector) -> bool:
+    coeficientes_de_la_matriz = original_aumented_matrix[:, :-1]
+    resultados_originales_de_la_matriz = original_aumented_matrix[:, -1]
+    calculated_solutions = np.dot(coeficientes_de_la_matriz, solution_vector)
+    return True if calculated_solutions in resultados_originales_de_la_matriz else False
 
 
 def main(*args: None) -> int:
