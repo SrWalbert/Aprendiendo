@@ -23,7 +23,8 @@ def comprobation(original_aumented_matrix, solution_vector) -> bool:
     coeficientes_de_la_matriz = original_aumented_matrix[:, :-1]
     resultados_originales_de_la_matriz = original_aumented_matrix[:, -1]
     calculated_solutions = np.dot(coeficientes_de_la_matriz, solution_vector)
-    return True if calculated_solutions in resultados_originales_de_la_matriz else False
+
+    return np.allclose(calculated_solutions, resultados_originales_de_la_matriz)
 
 
 def main(*args: None) -> int:
@@ -33,8 +34,8 @@ def main(*args: None) -> int:
         [
             [2, 3, 2, 1400],
             [1, 4, 1, 1100],
-            [1, 2, 3, 1300],
-
+            [1, 2, 3, 1300]
+            
         ],
         # fmt: on
         dtype=float,
