@@ -32,10 +32,9 @@ def main(*args: None) -> int:
     augmented_matrix = np.array(
         # fmt: off
         [
-            [2, 3, 2, 1400],
-            [1, 4, 1, 1100],
-            [1, 2, 3, 1300]
-            
+           [2,1,-3, 4],
+           [1,1,2, 3],
+           [-1,-2,0, -5]
         ],
         # fmt: on
         dtype=float,
