@@ -3,7 +3,7 @@ import algoritmos as al
 
 
 def main(*args: None) -> int:
-    print(al.en_vigenere("LosGatosSonBonitos", """sa"""))
+    print(al.en_vigenere("Aguacate", """Lorem ipsum dolor sit amet, quod est..."""))
     return 0
 
 
