@@ -49,6 +49,6 @@ def main(*args: None) -> int:
     print("¿Está correcto?", comprobation(augmented_matrix, solutions))
     return 0
 
-
+ 
 if __name__ == "__main__":
     sys.exit(main())

@@ -6,32 +6,23 @@ A = sp.Matrix(
     # fmt: off
     [
         
-        [1, -2, 1, 2],
-        [3, -1, -5, 4], 
-        [-4, 3, 2, 4],
-        [2, 4, -2, 1]
+        [1, 0, 0, 0, 0],
+        [-2, 2, 4, -3, -1], 
+        [-2, -1, 1, 2, 2],
+        [1, 3, 2, -1, 4],
+        [0, -2, 0, 0, -3]
     ]
     # fmt:on
 )
-
-B = sp.Matrix(
-    # fmt: off
-    [
-        [3,7],
-        [2,5]
-    ]
-    # fmt:on
-)
+B = sp.Matrix(#fmt:on
+              [[1, 0, 6], [2, -3, 5], [2, 3, 1]])  # fmt: off
 
 
 def main(*args: None) -> int:
     # Cálculo de la matriz de cofactores
-    print(A.cofactor_matrix())
-    print(A._eval_determinant())
+    
+    # print(B._eval_determinant())
     print(A**-1)
-    print("-------------------------")
-    # B
-    print(B**-1)
     return 0
 
 
