@@ -47,6 +47,8 @@ def main(*args: None) -> int:
     print("Soluciones: ", solutions)
 
     print("¿Está correcto?", comprobation(augmented_matrix, solutions))
+    
+    
     return 0
 
  

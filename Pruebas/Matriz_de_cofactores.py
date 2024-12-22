@@ -14,15 +14,21 @@ A = sp.Matrix(
     ]
     # fmt:on
 )
-B = sp.Matrix(#fmt:on
-              [[1, 0, 6], [2, -3, 5], [2, 3, 1]])  # fmt: off
+B = sp.Matrix(  # fmt:off
+    [[2, 4, -3, -1], [-1, 1, 2, 2], [3, 2, -1, 4], [-2, 0, 0, -3]]
+    # fmt: on
+)
 
 
 def main(*args: None) -> int:
     # Cálculo de la matriz de cofactores
-    
-    # print(B._eval_determinant())
+
     print(A**-1)
+    print("----------------")
+    print(A.cofactorMatrix())
+    # print(A**-1)
+    print("----------------")
+    print(sp.transpose(A.cofactor_matrix()))
     return 0
 
 
