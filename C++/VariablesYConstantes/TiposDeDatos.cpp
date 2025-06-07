@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
   char letra = 'A';
   cout << letra;
   cout << "\n";
-  //boolenao
+  //booleano
   bool boleano = true;
   cout << boleano;
   cout << "\n";
