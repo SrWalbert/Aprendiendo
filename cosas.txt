@@ -4,6 +4,7 @@ Noctis hight contrast
 kimbie dark
 red
 
+--------------------------------------------------------------
 modulos de python instalado
 pandas
 mathplod
@@ -11,3 +12,6 @@ seaborn
 pygame
 numba
 numpy
+
+
+---------------------------------------------------
