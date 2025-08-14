@@ -21,7 +21,7 @@ NOTE_NAMES = [
     "F",
     "F#/Gb",
     "G",
-    "G#",
+    "G#/Ab",
     "A",
     "A#/Bb",
     "B",
