@@ -32,9 +32,10 @@ def main(*args: None) -> int:
     augmented_matrix = np.array(
         # fmt: off
         [
-           [2,1,-3, 4],
-           [1,1,2, 3],
-           [-1,-2,0, -5]
+           [1,-1,0,0, 16],
+           [0,-1,1,0, 4],
+           [-1,0,0,1, 1],
+           [0,1,1,0, 6]
         ],
         # fmt: on
         dtype=float,
@@ -47,10 +48,9 @@ def main(*args: None) -> int:
     print("Soluciones: ", solutions)
 
     print("¿Está correcto?", comprobation(augmented_matrix, solutions))
-    
-    
+
     return 0
 
- 
+
 if __name__ == "__main__":
     sys.exit(main())
