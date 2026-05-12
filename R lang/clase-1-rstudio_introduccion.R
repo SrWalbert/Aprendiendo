@@ -36,4 +36,3 @@ saludo <- "hola"
 nombre <- "juan"
 pregunta <- "¿cómo estás?"
 frase_completa <- paste(saludo,nombre,pregunta)
-frase_completa
